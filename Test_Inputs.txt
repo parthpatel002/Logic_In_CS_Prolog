@@ -1,0 +1,68 @@
+Test Inputs-
+
+1) ?-poem([a,cuckoo,flew,over,an,empty,nest]).
+   Haiku
+   true.
+
+2) ?- assert(rhyme(watching,the)).
+   true.
+   ?- assert(rhyme(in,theatre)).
+   true.
+   ?- poem([The,people,were,watching,the,movie,in,the,hall,at,the,cinema,complex,theatre]).
+   Doha
+   true.
+
+3) ?- assert(rhyme(there,bet)).
+   true.
+   ?- assert(rhyme(a,called)).
+   true.
+   ?- poem([there,was,a,barber,shop,quartet,That,went,to,the,track,to,for,a,bet,Their,singing,exploded,When,their,pockets,got,loaded,From,a,topical,tip,called]).
+   Quartet
+   true.
+
+4) ///The following fusion sonnet has 3 quartets/// 
+   ?- assert(rhyme(there,bet)).
+   true.
+    ?- assert(rhyme(a,called)).
+   true.
+    ?- poem([there,was,a,barber,shop,quartet,That,went,to,the,track,to,for,a,bet,Their,singing,exploded,When,their,pockets,got,loaded,From,a,topical,tip,called,there,was,a,barber,shop,quartet,That,went,to,the,track,to,for,a,bet,Their,singing,exploded,When,their,pockets,got,loaded,From,a,topical,tip,called,there,was,a,barber,shop,quartet,That,went,to,the,track,to,for,a,bet,Their,singing,exploded,When,their,pockets,got,loaded,From,a,topical,tip,called]).
+   Fusion Sonnet
+   true.
+
+5)  ///The following fusion sonnet has 3 quartets and 2 dohas ///
+    ?- assert(rhyme(there,bet)).
+    true.
+    ?- assert(rhyme(a,called)).
+    true.
+    ?- assert(rhyme(watching,the)).
+    true.
+    ?- assert(rhyme(in,theatre)).
+    true.
+    ?- poem([there,was,a,barber,shop,quartet,That,went,to,the,track,to,for,a,bet,Their,singing,exploded,When,their,pockets,got,loaded,From,a,topical,tip,called,there,was,a,barber,shop,quartet,That,went,to,the,track,to,for,a,bet,Their,singing,exploded,When,their,pockets,got,loaded,From,a,topical,tip,called,there,was,a,barber,shop,quartet,That,went,to,the,track,to,for,a,bet,Their,singing,exploded,When,their,pockets,got,loaded,From,a,topical,tip,called,The,people,were,watching,the,movie,in,the,hall,at,the,cinema,complex,theatre,The,people,were,watching,the,movie,in,the,hall,at,the,cinema,complex,theatre]).
+    Fusion Sonnet
+    true.
+
+6) ?- poem([he,fell,down]).
+   Unknown poem
+   true.
+
+7) ?- poem([The,people,were,watching,the,movie,in,the,hall,at,the,cinema,complex,theatre,outside]).
+   Unknown poem
+   true.
+
+8) ?- poem([The,people,were,watching,the,movie,in,the,hall,"at",the,cinema,complex,theatre]).
+   Doha
+   true.
+
+9) ///The following fusion sonnet has 3 quartets, 2 dohas and a haiku at the last. ///
+    ?- assert(rhyme(there,bet)).
+    true.
+    ?- assert(rhyme(a,called)).
+    true.
+    ?- assert(rhyme(watching,the)).
+    true.
+    ?- assert(rhyme(in,theatre)).
+    true.
+    ?- poem([there,was,a,barber,shop,quartet,That,went,to,the,track,to,for,a,bet,Their,singing,exploded,When,their,pockets,got,loaded,From,a,topical,tip,called,there,was,a,barber,shop,quartet,That,went,to,the,track,to,for,a,bet,Their,singing,exploded,When,their,pockets,got,loaded,From,a,topical,tip,called,there,was,a,barber,shop,quartet,That,went,to,the,track,to,for,a,bet,Their,singing,exploded,When,their,pockets,got,loaded,From,a,topical,tip,called,The,people,were,watching,the,movie,in,the,hall,at,the,cinema,complex,theatre,The,people,were,watching,the,movie,in,the,hall,at,the,cinema,complex,theatre,a,cuckoo,flew,over,an,empty,nest]).
+    Fusion Sonnet
+    true.

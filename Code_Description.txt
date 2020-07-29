@@ -1,0 +1,43 @@
+Query Format-
+
+      The user must enter a pair of rhyming words into the database through the assert command:
+      The predicate rhyme(which expects 2 arguments i.e. words) has to be used for this.There is already a fact in the databse which states that same words rhyme.
+      Examples of valid input are-
+      ?-assert(rhyme(walk,talk)).
+      ?-assert(rhyme(fun,run)).
+      
+      After entering all the pairs of rhyming words,the user should enter the poem using the poem predicate.
+      The poem predicate expects a list of words as an argument and prints the type of poem enetered.
+      Note that there must be a comma between two elements of a list.
+      For example-
+      ?-poem([a,cuckoo,flew,over,an,empty,nest]).
+      
+
+Meaning of top-level predicates-
+
+ 1)poem([H|T])
+   It accepts a list of words as an argument and prints the type of poem entered.
+   If the list is empty,the poem is classified as an unknown.
+ 
+ 2)rhyme(X,Y)
+   It is true if words X and Y rhyme with each other.
+   The facts regarding this predicate have to be entered into the database by the user using assert command.
+
+ 3)haiku([H|T])
+   It takes a list as argument and is true if the input list is a haiku.
+
+ 
+ 3)doha([H|T])
+   It takes a list as argument and is true if the input list is a doha.
+ 
+ 
+ 3)quartet([H|T])
+   It takes a list as argument and is true if the input list is a quartet.
+
+ 4)fusion_sonnet([H|T],N)
+  It takes a list as first argument and is true if the input list is a fusion sonnet.
+  The second argument N is the number of words in the list(first argument).(N is counted internally in the program using the count_words predicate).
+
+ 5)count_words([H|T],N)
+   It takes a list as the first argument and stores the number of elements in the list in the second argument.
+
