@@ -15,6 +15,7 @@ swipl LCSAssignment.pl
 ```
 
 The following is a screenshot demonstrating the working of the Prolog program:
+
 ![Prolog Program](./imgs/cli.png)
 
 This assignment was done in a team of two, with my partner being [Aashish Singh](https://github.com/Aashish683).
